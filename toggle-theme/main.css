@@ -1,0 +1,36 @@
+#toggle-theme {
+  visibility: hidden !important;
+  position: absolute;
+}
+
+#toggle-theme + label {
+  font-size: 16px !important;
+  display: inline-block;
+  width: 6em;
+  height: 3em;
+  border-radius: 1.5em;
+  background: #2172ac;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+#toggle-theme + label:before {
+  content: "";
+  width: 2em;
+  height: 2em;
+  background: url("sun.svg") center/cover;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  transition: background 0.5s ease, left 0.5s ease;
+}
+
+#toggle-theme:checked + label {
+  background:   #112330;
+}
+
+#toggle-theme:checked + label:before {
+  background: url("mon.svg") center/cover;
+  left: 3.5em;
+}
